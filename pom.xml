@@ -5,13 +5,14 @@
 
 	<groupId>vislike.hello.world.gui</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>${revision}</version>
 
 	<packaging>pom</packaging>
 	<name>Hello World GUI - Parent</name>
 	<description>A simple test GUI using modules.</description>
 
 	<properties>
+		<revision>1.0-devbuild</revision>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
 		<swt.version>3.119.0</swt.version>

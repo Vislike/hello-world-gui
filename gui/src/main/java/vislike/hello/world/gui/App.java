@@ -1,5 +1,7 @@
 package vislike.hello.world.gui;
 
+import java.util.Arrays;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -26,7 +28,7 @@ public class App {
 		Text helloWorldTest = new Text(shell, SWT.BORDER);
 		helloWorldTest.setEditable(false);
 		helloWorldTest.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false));
-		helloWorldTest.setText("Hello World SWT");
+		helloWorldTest.setText("Hello World SWT" + (args.length == 0 ? "" : " " + Arrays.toString(args)));
 
 		Button button = new Button(shell, SWT.PUSH);
 		button.setText("Go");
