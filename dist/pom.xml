@@ -28,6 +28,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>hello-world-gui-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
