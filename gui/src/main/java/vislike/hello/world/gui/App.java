@@ -9,13 +9,19 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class App {
+
+	private static final Logger logger = LoggerFactory.getLogger(App.class);
+
 	public static void main(String[] args) {
 		Display display = new Display();
 		Shell shell = new Shell(display);
 		shell.setLayout(new GridLayout(3, false));
 		shell.setSize(640, 480);
+		shell.setText("Hello World App");
 
 		Text helloWorldTest = new Text(shell, SWT.BORDER);
 		helloWorldTest.setEditable(false);
@@ -28,8 +34,16 @@ public class App {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				String text = helloWorldTest.getText();
-				System.out.println(text);
-				System.out.println(Thread.currentThread().getName());
+				logger.info(text);
+			}
+		});
+
+		Button button2 = new Button(shell, SWT.PUSH);
+		button2.setText("Crash");
+		button2.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				throw new UnsupportedOperationException("Intentional crash!");
 			}
 		});
 
