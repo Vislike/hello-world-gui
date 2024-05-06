@@ -45,6 +45,7 @@
 				</executions>
 				<configuration>
 					<attach>false</attach>
+					<tarLongFileMode>posix</tarLongFileMode>
 					<descriptors>
 						<descriptor>assembly.xml</descriptor>
 					</descriptors>

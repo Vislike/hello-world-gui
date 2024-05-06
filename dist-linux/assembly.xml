@@ -8,7 +8,7 @@
 	<id>bin-linux</id>
 	<formats>
 		<format>dir</format>
-		<format>zip</format>
+		<format>tar.gz</format>
 	</formats>
 	<includeBaseDirectory>true</includeBaseDirectory>
 	<fileSets>
