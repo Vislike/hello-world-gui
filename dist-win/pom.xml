@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -10,8 +12,8 @@
 	</parent>
 
 	<packaging>pom</packaging>
-	<artifactId>dist</artifactId>
-	<name>Hello World GUI - Dist</name>
+	<artifactId>dist-win</artifactId>
+	<name>Hello World GUI - Dist Win</name>
 
 	<dependencies>
 		<dependency>
@@ -42,6 +44,7 @@
 					</execution>
 				</executions>
 				<configuration>
+					<attach>false</attach>
 					<descriptors>
 						<descriptor>assembly.xml</descriptor>
 					</descriptors>

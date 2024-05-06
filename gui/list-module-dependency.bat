@@ -1,3 +1,3 @@
 @echo off
-jdeps --list-deps --ignore-missing-deps --multi-release base target/dependency/*.jar
+jdeps --list-deps --ignore-missing-deps --multi-release 21 target/dependency/*.jar
 pause
